@@ -5,12 +5,26 @@ import './App.css';
 import Home from './pages/Home/Home';
 import { Store } from './Store/Store';
 
+interface Comment {
+    comment: {
+        name: string;
+        email: string;
+        body: string;
+    };
+}
+
 export const StoreContext = React.createContext(Store);
 
 function App() {
-    const [comment, setComment] = React.useState<any>('');
+    const [comment, setComment] = React.useState<Comment>({
+        comment: {
+            name: '',
+            email: '',
+            body: '',
+        },
+    });
     const value: any = { comment, setComment };
-    console.log(value);
+
     return (
         <StoreContext.Provider value={value}>
             <div className="App">
