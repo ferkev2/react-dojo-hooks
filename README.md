@@ -11,7 +11,7 @@ Il faudra creer une page Home dans laquel on fera la plupart des elements html n
 
 ## Doc React
 
-Selon la Documentation, il y a les Hooks de base :
+Selon la [Documentation](https://fr.reactjs.org/docs/hooks-reference.html), il y a les Hooks de base :
 * useState
 * useEffect
 * useContext
