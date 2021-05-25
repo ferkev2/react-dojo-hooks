@@ -15,7 +15,7 @@ interface Comments {
 
 export default function Home() {
     const [comments, setComments] = useState<Comments[]>([]);
-    const [comment, setComment] = useState<any>({});
+    const [newComment, setNewComment] = useState<any>({});
     const [isLoaded, setIsLoaded] = useState<boolean>(true);
     useEffect(() => {
         async function fetchData() {
@@ -37,14 +37,16 @@ export default function Home() {
         []
     );
 
-    const onHandleChange = (
-        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-    ) => {
-        setComment({
-            ...comment,
-            [e.target.name]: e.target.value,
-        });
-    };
+    const onHandleChange = useCallback(
+        (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+            console.log(newComment);
+            setNewComment({
+                ...newComment,
+                [e.target.name]: e.target.value,
+            });
+        },
+        [newComment]
+    );
 
     return (
         <StoreContext.Consumer>
@@ -116,7 +118,7 @@ export default function Home() {
                         <div>
                             <button
                                 type="button"
-                                onClick={() => store.setComment(comment)}
+                                onClick={() => store.setComment(newComment)}
                             >
                                 Ajouter le commentaire
                             </button>
