@@ -1,3 +1,30 @@
+# The exercice
+
+Le but de cet exercice est de réviser ou d'apprendre à utiliser les hooks de react.
+Dans ce but, nous allons utiliser les hooks suivant:
+* useEffect
+* useCallback
+* useState
+* useContext
+
+Il faudra creer une page Home dans laquel on fera la plupart des elements html nécessaire (Vous êtes libre de faire comme vous le sentez). Ensuite, il faudra faire le fetch sur cette url ```https://jsonplaceholder.typicode.com/posts/1/comments``` et utiliser le hook adéquat. Puis vous devrez ajouter un callback sur chacune des cartes. Enfin, utiliser le context pour garder l'élément en favori (Ceci n'est qu'un exemple pour faire simple).
+
+## Doc React
+
+Selon la Documentation, il y a les Hooks de base :
+* useState
+* useEffect
+* useContext
+
+Et les Hooks supplémentaires :
+* useReducer
+* useCallback
+* useMemo
+* useRef
+* useImperativeHandle
+* useLayoutEffect
+* useDebugValue
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
